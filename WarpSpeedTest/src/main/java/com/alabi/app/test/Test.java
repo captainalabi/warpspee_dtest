@@ -66,7 +66,6 @@ public class Test {
 				|| fraudDetection.isPingPongActivity(userTransactions)		    		   
 				) {
 			System.out.println("Fraud suspected!");
-			System.out.println("May be due to network");
 		}else {
 			System.out.println("No Fraud suspected!");
 		}
