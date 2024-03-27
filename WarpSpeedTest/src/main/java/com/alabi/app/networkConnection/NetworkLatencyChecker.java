@@ -24,7 +24,7 @@ public class NetworkLatencyChecker {
 				System.out.println("Failed to reach " + ipAddress + ".");
 			}
 		} catch (Exception e) {
-			System.out.println("Error occurred: " + e.getMessage());
+			System.out.println("Error occurred: Could not connect to the web address" + e.getMessage());
 		}
 		return latency;
 	}
