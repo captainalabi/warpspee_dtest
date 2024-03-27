@@ -83,7 +83,7 @@ public class Test {
 		    		   || networkLatencyChecker.isNetworkLatent(networkName)
 				) {
 			System.out.println("Fraud suspected!");
-			System.out.println("May be due to network");
+			System.out.println("May be due to network latency");
 		}else {
 			System.out.println("No Fraud suspected!");
 		}
