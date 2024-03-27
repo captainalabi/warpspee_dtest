@@ -80,7 +80,7 @@ public class Test {
 				|| fraudDetection.isServiceIDs3Distinct(userTransactions)
 				|| fraudDetection.is5MinutesWindow(userTransactions)				
 				|| fraudDetection.isPingPongActivity(userTransactions))
-		    		   && networkLatencyChecker.isNetworkLatent(networkName)
+		    		   || networkLatencyChecker.isNetworkLatent(networkName)
 				) {
 			System.out.println("Fraud suspected!");
 			System.out.println("May be due to network");
@@ -100,9 +100,9 @@ public class Test {
 			List<Transaction> user4TransactionList = allTransaction.getAUserTransactions("user4");
 			List<Transaction> user5TransactionList = allTransaction.getAUserTransactions("user5");
 			List<Transaction> user6TransactionList = allTransaction.getAUserTransactions("user6");
-			fraudTest(user6TransactionList, "network name e.g. www.mybank.com");
+			fraudTest(user3TransactionList, "www.google.com");
 			//you may remove the network name to test without considering network latency
-			fraudTest(user6TransactionList);
+			//fraudTest(user6TransactionList);
 			
 		}
 }
